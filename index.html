@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASEAN Y2K38 Penetration Testing & Cost Estimation System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Command Center Header -->
+  <div id="ui-container">
+    <h1 class="holo-blue">ASEAN Y2K38 Mitigation System</h1>
+    <p>Regional Cost Estimation & Migration Solutions</p>
+    <div id="status-bar">
+      <span>Current Phase: <span id="current-phase">Penetration Testing</span></span> |
+      <span>System Status: <span id="system-status">Active</span></span> |
+      <span>Regional Cost: <span id="regional-cost">$0.00</span></span>
+    </div>
+  </div>
+
+  <!-- Tactical Layers -->
+  <section id="layer-threats" class="holo-ring">
+    <h2 class="holo-red">Y2K38 Threat Assessment</h2>
+    <p class="holo-green">
+      <strong>32-bit Time Overflow:</strong> The Y2K38 problem will occur when 32-bit systems reach 2.1 billion seconds (January 19, 2038).<br>
+      <strong>ASEAN Impact:</strong> Critical systems failure in infrastructure, finance, and communications across member states.
+    </p>
+    <p class="holo-purple"><em>Directive: “Identify vulnerabilities through regional penetration testing!”</em></p>
+  </section>
+
+  <section id="layer-strategy" class="gradient-overlay">
+    <h2 class="holo-purple">Strategic Migration Paths</h2>
+    <p class="holo-blue">
+      The solution requires multi-phase approach:
+      1. Regional penetration testing to identify vulnerabilities
+      2. Country-specific system upgrades
+      3. Signature bit removal (unsign bit)
+      4. Cloud migration for scalable solutions
+    </p>
+    <p class="holo-green"><em>Directive: “Comprehensive testing leads to robust solutions!”</em></p>
+  </section>
+
+  <!-- Penetration Testing Section -->
+  <section id="penetration-testing" class="nebula-pulse">
+    <h2 class="holo-orange">Regional Penetration Testing</h2>
+    <div class="testing-controls">
+      <div class="testing-panel">
+        <h3 class="holo-yellow">Test Parameters</h3>
+        <div class="control-group">
+          <label for="country-select">ASEAN Country:</label>
+          <select id="country-select">
+            <option value="brunei">Brunei</option>
+            <option value="cambodia">Cambodia</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="laos">Laos</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="myanmar">Myanmar</option>
+            <option value="philippines">Philippines</option>
+            <option value="singapore">Singapore</option>
+            <option value="thailand">Thailand</option>
+            <option value="vietnam">Vietnam</option>
+          </select>
+        </div>
+        
+        <div class="control-group">
+          <label for="system-type">System Type:</label>
+          <select id="system-type">
+            <option value="infrastructure">Infrastructure</option>
+            <option value="financial">Financial</option>
+            <option value="communications">Communications</option>
+            <option value="government">Government</option>
+          </select>
+        </div>
+        
+        <div class="control-group">
+          <label for="test-intensity">Test Intensity:</label>
+          <input type="range" id="test-intensity" min="1" max="10" value="5">
+          <span id="intensity-value">5</span>
+        </div>
+        
+        <div class="control-group">
+          <button class="btn holo-orange" id="start-test">Start Regional Test</button>
+        </div>
+      </div>
+      
+      <div class="results-panel">
+        <h3 class="holo-yellow">Test Results</h3>
+        <div id="test-results">
+          <p>Select country and system type to start test</p>
+        </div>
+        <div id="vulnerability-chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Paths Section -->
+  <section id="solution-paths" class="holo-ring">
+    <h2 class="holo-green">Migration & Upgrade Solutions</h2>
+    <div class="solution-options">
+      <div class="solution-card" id="solution-64bit">
+        <h3 class="holo-blue">64-bit Architecture Upgrade</h3>
+        <p>Complete system overhaul to 64-bit architecture to handle date/time values beyond 2038</p>
+        <div class="cost-estimate">Estimated Cost: <span id="cost-64bit">$120-150B</span></div>
+      </div>
+      
+      <div class="solution-card" id="solution-unsign">
+        <h3 class="holo-orange">Unsign Bit Removal</h3>
+        <p>Remove signature bits to extend 32-bit system lifespan by 10-15 years</p>
+        <div class="cost-estimate">Estimated Cost: <span id="cost-unsign">$40-60B</span></div>
+      </div>
+      
+      <div class="solution-card" id="solution-cloud">
+        <h3 class="holo-purple">Cloud Migration</h3>
+        <p>Migrate critical systems to cloud infrastructure with automatic 64-bit scaling</p>
+        <div class="cost-estimate">Estimated Cost: <span id="cost-cloud">$80-100B</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country Cost Estimation Section -->
+  <section id="cost-estimation" class="gradient-overlay">
+    <h2 class="holo-yellow">ASEAN Country Cost Estimation</h2>
+    <div class="cost-calculator">
+      <div class="country-selector">
+        <h3 class="holo-yellow">Select Country:</h3>
+        <select id="cost-country-select">
+          <option value="brunei">Brunei</option>
+          <option value="cambodia">Cambodia</option>
+          <option value="indonesia">Indonesia</option>
+          <option value="laos">Laos</option>
+          <option value="malaysia">Malaysia</option>
+          <option value="myanmar">Myanmar</option>
+          <option value="philippines">Philippines</option>
+          <option value="singapore">Singapore</option>
+          <option value="thailand">Thailand</option>
+          <option value="vietnam">Vietnam</option>
+        </select>
+      </div>
+      
+      <div class="cost-calculator">
+        <div class="cost-inputs">
+          <div class="input-group">
+            <label for="infrastructure-cost">Infrastructure:</label>
+            <input type="range" id="infrastructure-cost" min="1" max="10" value="3">
+            <span id="infrastructure-value">$3B</span>
+          </div>
+          
+          <div class="input-group">
+            <label for="financial-cost">Financial Systems:</label>
+            <input type="range" id="financial-cost" min="1" max="10" value="2">
+            <span id="financial-value">$2B</span>
+          </div>
+          
+          <div class="input-group">
+            <label for="communications-cost">Communications:</label>
+            <input type="range" id="communications-cost" min="1" max="10" value="2">
+            <span id="communications-value">$2B</span>
+          </div>
+          
+          <div class="input-group">
+            <label for="government-cost">Government Systems:</label>
+            <input type="range" id="government-cost" min="1" max="10" value="3">
+            <span id="government-value">$3B</span>
+          </div>
+          
+          <button class="btn holo-yellow" id="calculate-costs">Calculate Country Costs</button>
+        </div>
+        
+        <div class="cost-results">
+          <h3 class="holo-yellow">Country Investment Required</h3>
+          <div class="total-cost">
+            <span id="total-cost-value">$10B</span>
+            <p>Annual investment required to prevent country-specific Y2K38 collapse</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Cost Summary -->
+  <section id="regional-summary" class="holo-ring">
+    <h2 class="holo-yellow">ASEAN Regional Summary</h2>
+    <div class="summary-content">
+      <div class="summary-item">
+        <h3>Total Regional Cost</h3>
+        <div id="total-regional-cost">$110B</div>
+      </div>
+      
+      <div class="summary-item">
+        <h3>Highest Priority Countries</h3>
+        <ul>
+          <li>Indonesia: $25B</li>
+          <li>Thailand: $18B</li>
+          <li>Malaysia: $15B</li>
+        </ul>
+      </div>
+      
+      <div class="summary-item">
+        <h3>Solution Distribution</h3>
+        <ul>
+          <li>64-bit Upgrade: 40%</li>
+          <li>Cloud Migration: 30%</li>
+          <li>Unsign Bit: 20%</li>
+          <li>Other: 10%</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Command Ambient Feed -->
+  <audio id="bg-music" autoplay loop>
+    <source src="space-ambient.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-toggle">🔊</button>
+
+  <!-- Signal Activity Bars -->
+  <div class="equalizer">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Sensor Sweep Visuals -->
+  <div class="fog-layer"></div>
+  <div class="holo-ring"></div>
+
+  <!-- Importmap for Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

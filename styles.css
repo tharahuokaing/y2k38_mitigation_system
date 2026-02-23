@@ -1,0 +1,303 @@
+:root {
+  --holo-blue: #00ffff;
+  --holo-green: #00ff00;
+  --holo-red: #ff00ff;
+  --holo-purple: #c900ff;
+  --holo-orange: #ff8800;
+  --holo-yellow: #ffff00;
+  --bg-color: #000010;
+  --panel-color: rgba(10, 15, 30, 0.9);
+  --glass-blur: blur(10px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: 'Khmer OS System', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 128, 255, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 90% 70%, rgba(128, 0, 255, 0.15) 0%, transparent 30%);
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* UI Container */
+#ui-container {
+  background: var(--panel-color);
+  border: 1px solid var(--holo-blue);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 90%;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 0 20px var(--holo-blue), inset 0 0 20px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+#ui-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, var(--holo-blue), transparent);
+}
+
+/* Hologram Effects */
+.holo-blue {
+  color: var(--holo-blue);
+  text-shadow: 0 0 10px var(--holo-blue), 0 0 20px var(--holo-blue);
+}
+
+.holo-green {
+  color: var(--holo-green);
+  text-shadow: 0 0 10px var(--holo-green), 0 0 20px var(--holo-green);
+}
+
+.holo-red {
+  color: var(--holo-red);
+  text-shadow: 0 0 10px var(--holo-red), 0 0 20px var(--holo-red);
+}
+
+.holo-purple {
+  color: var(--holo-purple);
+  text-shadow: 0 0 10px var(--holo-purple), 0 0 20px var(--holo-purple);
+}
+
+.holo-orange {
+  color: var(--holo-orange);
+  text-shadow: 0 0 10px var(--holo-orange), 0 0 20px var(--holo-orange);
+}
+
+.holo-yellow {
+  color: var(--holo-yellow);
+  text-shadow: 0 0 10px var(--holo-yellow), 0 0 20px var(--holo-yellow);
+}
+
+/* Tactical Layers */
+section {
+  background: var(--panel-color);
+  border: 1px solid var(--holo-blue);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+}
+
+#layer-threats::before { color: var(--holo-red); }
+#layer-strategy::before { color: var(--holo-purple); }
+#penetration-testing::before { color: var(--holo-orange); }
+#solution-paths::before { color: var(--holo-green); }
+#cost-estimation::before { color: var(--holo-yellow); }
+#regional-summary::before { color: var(--holo-yellow); }
+
+/* Mission Links */
+#mission-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--holo-blue);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 180px;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px var(--holo-blue);
+  transform: translateY(-3px);
+}
+
+.holo-blue:hover { color: white; background: var(--holo-blue); }
+.holo-green:hover { color: white; background: var(--holo-green); }
+.holo-red:hover { color: white; background: var(--holo-red); }
+.holo-orange:hover { color: white; background: var(--holo-orange); }
+.holo-yellow:hover { color: white; background: var(--holo-yellow); }
+
+/* Status Bar */
+#status-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+}
+
+/* Audio Controls */
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--holo-blue);
+  border: 1px solid var(--holo-blue);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 0 10px var(--holo-blue);
+  transition: all 0.3s ease;
+}
+
+#music-toggle:hover {
+  background: rgba(0, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Equalizer Bars */
+.equalizer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 3px;
+  height: 40px;
+  z-index: 100;
+}
+
+.equalizer span {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: var(--holo-blue);
+  border-radius: 2px;
+  animation: equalize 1.5s infinite alternate;
+}
+
+.equalizer span:nth-child(2) { animation-delay: -0.5s; }
+.equalizer span:nth-child(3) { animation-delay: -1s; }
+.equalizer span:nth-child(4) { animation-delay: -1.5s; }
+
+@keyframes equalize {
+  0% { transform: scaleY(0.2); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.5); }
+}
+
+/* Holo Ring */
+.holo-ring {
+  position: relative;
+  overflow: visible;
+}
+
+.holo-ring::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  right: -20%;
+  bottom: -20%;
+  border: 2px solid var(--holo-blue);
+  border-radius: 50%;
+  animation: pulseRing 3s infinite;
+  opacity: 0.7;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+/* Gradient Overlay */
+.gradient-overlay {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.15) 0%, 
+    rgba(128, 0, 255, 0.15) 100%);
+}
+
+/* Nebula Pulse */
+.nebula-pulse {
+  animation: nebulaGlow 5s infinite alternate;
+}
+
+@keyframes nebulaGlow {
+  0% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); }
+  100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); }
+}
+
+/* Fog Layer */
+.fog-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 255, 255, 0.05) 0%, 
+    transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #ui-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  #mission-links ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    min-width: 100%;
+  }
+}
